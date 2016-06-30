@@ -28,8 +28,6 @@ This is a Chinese Traditional Version of ["Learn UNIX in 10 minutes"](http://fre
 
 ## 目錄
 
------
-
 在 UNIX 內，檔案和目錄的路徑，會被每個目錄名稱之前的斜線 "/" 給隔開。
 
 範例：
@@ -40,8 +38,6 @@ This is a Chinese Traditional Version of ["Learn UNIX in 10 minutes"](http://fre
 
 
 ## 在檔案系統內遨遊
-
------
 
 	pwd					顯示「目前工作目錄」，或是目前所在的目錄
 	cd					切換目前所在目錄到家目錄 (HOME directory)
@@ -54,7 +50,6 @@ This is a Chinese Traditional Version of ["Learn UNIX in 10 minutes"](http://fre
 
 ## 條列出目錄內容
 
------
 
 * `ls`: 條列出一個目錄的內容<br>
 * `ls -l`: 用長(long)（包含細節）格式條列出一個目錄的內容<br>
@@ -76,8 +71,6 @@ This is a Chinese Traditional Version of ["Learn UNIX in 10 minutes"](http://fre
 
 ## 更改檔案權限和屬性
 
------
-
 	chmod 755 file			將屬於檔案擁有者的檔案權限更改為 rwx，以及將檔案擁有者所屬的群組和其他人的權限改為 rx。（7 = rwx = 二進位 111。 5 = r-x = 二進位101）
 	chgrp user file			將檔案所屬群組指定為 user 群組
 	chown cliff file		將檔案擁有者指定為 cliff
@@ -87,8 +80,6 @@ This is a Chinese Traditional Version of ["Learn UNIX in 10 minutes"](http://fre
 
 
 ## 移動、重新命名、和複製檔案
-
------
 
 	cp file1 file2			複製 (copy) 一個檔案
 	mv file1 newname		移動 (move) 一個檔案或將它重新命名
@@ -101,8 +92,6 @@ This is a Chinese Traditional Version of ["Learn UNIX in 10 minutes"](http://fre
 
 
 ## 瀏覽和編輯檔案
-
------
 
 	cat filename		將檔案的內容顯示在螢幕上
 	more filename		逐漸地將檔案的內容顯示在螢幕上：ENTER = 往下移動一行，
@@ -118,8 +107,6 @@ This is a Chinese Traditional Version of ["Learn UNIX in 10 minutes"](http://fre
 
 ## Shells
 
------
-
 
 命令列介面的功能會因為使用的 shell 程式的不同而有些微的差異。
 
@@ -133,8 +120,6 @@ This is a Chinese Traditional Version of ["Learn UNIX in 10 minutes"](http://fre
 
 
 ## 環境變數
-
------
 
 您可以使用環境變數，來教您正在使用的 shell 記住一些事情。使用 bash shell 當作範例：
 
@@ -153,28 +138,20 @@ This is a Chinese Traditional Version of ["Learn UNIX in 10 minutes"](http://fre
 
 ## 互動式（指令）歷史紀錄
 
------
-
 bash 和 tcsh（其他 shell 也可能有）的特殊功能：您可以按鍵盤的「上」鍵來存取、修改、和執行先前使用過的指令。
 
 
 ## 檔名補齊
-
------
 
 bash 和 tcsh（其他 shell 也可能有）的特殊功能：您可以按下 TAB 鍵來補齊已經漸入了一部份的檔名。舉例來說：如果您想要編輯一個在目錄裡的且叫做 "constantine-monks-and-willy-wonka.txt" 的檔案，您可以鍵入 `'vi const'`，再按下 TAB 鍵，這時 shell 會補齊剩下的文字（不過這個檔名必須是獨一無二的）。
 
 
 ## Bash 是一個很酷的 shell
 
------
-
 Bash 甚至可以補齊指令跟環境變數的名稱。而且如果這時有很多可以被捕齊的名稱可以選擇，你可以按下兩次 TAB 鍵，bash 會顯示所有補齊的結果。Bash 是大多數 Linux 系統的預設 shell。
 
 
 ## 重導
-
------
 
 	grep string filename > newfile		將 grep 指令輸出的內容重導到檔案 'newfile' 之內。
 	grep string filename >> existfile	將 grep 指令輸出的內容附加到檔案 'existfile' 的結尾。
@@ -183,8 +160,6 @@ Bash 甚至可以補齊指令跟環境變數的名稱。而且如果這時有很
 
 
 ## 管線
-
------
 
 管線符號 `|` 是用來將一個指令輸出的內容導到另外一個指令中。
 
@@ -199,8 +174,6 @@ Bash 甚至可以補齊指令跟環境變數的名稱。而且如果這時有很
 
 ## 指令替代
 
------
-
 透過指令替代，您可以將一個指令輸出的內容輸入另一個指令當中。指令替代的執行方法，就是將要被替代的指令用兩個反單引號（`）框起來。舉個例子：
 
 	cat `find . -name aaa.txt`
@@ -210,14 +183,10 @@ Bash 甚至可以補齊指令跟環境變數的名稱。而且如果這時有很
 
 ## 在檔案中搜尋字串：grep 指令
 
------
-
 	grep string filename		顯示在檔案內容中，所有包含字串 string 的所有文字行。
 
 
 ## 尋找檔案：find 指令
-
------
 
 `find search_path -name filename`
 
@@ -228,8 +197,6 @@ Bash 甚至可以補齊指令跟環境變數的名稱。而且如果這時有很
 
 
 ## 讀取或寫入磁帶、備份、和壓縮：tar 指令
-
------
 
 tar 指令代表的是 "tape archive（磁帶封裝）"。這是一個讀取或寫入封裝檔（可以是很多檔案或是整個目錄樹的集合）的標準做法。
 
@@ -258,8 +225,6 @@ Tar 範例：
 
 ## 需要幫忙？man 和 apropos 指令
 
------
-
 大多數的指令都會有一個好用的的說明頁面，也多多少少會寫到一些細節的東西，像是一些很隱晦或是或是莫測高深的東西。有些人打趣說就叫 man 頁面的原因是因為只有真正厲害的人 (real men) 才看得懂裡面在寫些啥。
 
 範例：
@@ -276,8 +241,6 @@ Tar 範例：
 
 
 ## vi 編輯器的基本操作
-
------
 
 ### 開啓一個檔案
 
@@ -356,10 +319,3 @@ Tar 範例：
 	
 	:set number			顯示行號
 	:set nonumber		不顯示行號
-
-
-
-
-
-
-
